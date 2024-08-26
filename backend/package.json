@@ -1,0 +1,33 @@
+{
+    "name": "ecommerce-backend",
+    "version": "1.0.0",
+    "description": "MERN STACK ECOMMERCE WEBSITE, EXPRESS, NODE, MONGODB",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/YousufSakib/MERN-STACK-ECOMMERCE.git"
+    },
+    "keywords": [
+        "MERN",
+        "ECOMMERCE",
+        "WEBSITE",
+        "EXPRESS",
+        "NODE",
+        "MONGODB"
+    ],
+    "author": "Yousuf Ali Shakib",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/YousufSakib/MERN-STACK-ECOMMERCE/issues"
+    },
+    "homepage": "https://github.com/YousufSakib/MERN-STACK-ECOMMERCE#readme",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^8.5.4",
+        "validator": "^13.12.0"
+    }
+}
