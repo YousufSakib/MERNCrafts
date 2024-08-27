@@ -26,6 +26,7 @@
     "homepage": "https://github.com/YousufSakib/MERN-STACK-ECOMMERCE#readme",
     "dependencies": {
         "bcryptjs": "^2.4.3",
+        "cloudinary": "^2.4.0",
         "jsonwebtoken": "^9.0.2",
         "mongoose": "^8.5.4",
         "validator": "^13.12.0"
