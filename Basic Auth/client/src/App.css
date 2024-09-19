@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #345344;
+}
+
+.form-container {
+  width: 1000px;
+}
+.title,
+.slogan {
+  text-align: center;
+}
+
+.btn {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.alert {
+  margin-bottom: 1.5rem;
+}
