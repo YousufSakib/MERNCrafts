@@ -16,6 +16,7 @@ export const AuthProvider = ({ children }) => {
       setIsAuthenticated(true);
     }
   }, []);
+
   const login = (newToken, newData) => {
     localStorage.setItem(
       "user_data",
@@ -31,6 +32,7 @@ export const AuthProvider = ({ children }) => {
     setToken(null);
     setUserData(null);
     setIsAuthenticated(false);
+    console.log("logout");
   };
 
   return (

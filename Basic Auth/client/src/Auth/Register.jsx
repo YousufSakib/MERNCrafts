@@ -7,6 +7,7 @@ function Register() {
   const { loading, error, registerUser } = useSignup();
 
   const handleRegister = (values) => {
+    console.log(values);
     registerUser(values);
   };
 
@@ -61,7 +62,7 @@ function Register() {
                 },
               ]}
             >
-              <Input size="large" placeholder="Enter you Password" />
+              <Input.Password size="large" placeholder="Enter you Password" />
             </Form.Item>
             <Form.Item
               label="Password"
@@ -73,7 +74,10 @@ function Register() {
                 },
               ]}
             >
-              <Input size="large" placeholder="Re-enter you Password" />
+              <Input.Password
+                size="large"
+                placeholder="Re-enter you Password"
+              />
             </Form.Item>
             {error && (
               <Alert
@@ -92,7 +96,6 @@ function Register() {
                 className="btn"
               >
                 {loading ? <Spin /> : "Create Account"}
-                "Create Account"
               </Button>
             </Form-Item>
             <Form-Item>

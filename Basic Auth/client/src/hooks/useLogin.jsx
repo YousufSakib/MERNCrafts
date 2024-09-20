@@ -2,20 +2,16 @@ import { useState } from "react";
 import { useAuth } from "../contexts/AuthProvider";
 import { message } from "antd";
 
-function useSignup() {
+function useLogin() {
   const { login } = useAuth();
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(null);
 
-  const registerUser = async (values) => {
-    if (values.password !== values.passwordConfirm) {
-      return setError("Password are not the same");
-    }
-
+  const loginUser = async (values) => {
     try {
       setError(null);
       setLoading(true);
-      const res = await fetch("http://localhost:3000/api/auth/signup", {
+      const res = await fetch("http://localhost:3000/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -25,13 +21,13 @@ function useSignup() {
 
       const data = await res.json();
 
-      if (res.status === 201) {
+      if (res.status === 200) {
         message.success(data.message);
         login(data.token, data.user);
-      } else if (res.status === 400) {
+      } else if (res.status === 404) {
         setError(data.message);
       } else {
-        message.error("Registration failed");
+        message.error("Login failed");
       }
     } catch (error) {
       message.error(error);
@@ -39,7 +35,7 @@ function useSignup() {
       setLoading(false);
     }
   };
-  return { loading, error, registerUser };
+  return { loading, error, loginUser };
 }
 
-export default useSignup;
+export default useLogin;

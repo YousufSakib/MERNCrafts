@@ -11,7 +11,7 @@ body {
 }
 
 .form-container {
-  width: 1000px;
+  min-width: 540px;
 }
 .title,
 .slogan {
@@ -25,4 +25,15 @@ body {
 
 .alert {
   margin-bottom: 1.5rem;
+}
+
+.profile-card {
+  width: 500px;
+}
+
+.avater {
+  margin-bottom: 1.5rem;
+}
+.username {
+  text-transform: capitalize;
 }

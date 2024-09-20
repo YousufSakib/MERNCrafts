@@ -1,12 +1,17 @@
 import React from "react";
 import { Card, Flex, Typography, Form, Input, Button, Spin, Alert } from "antd";
 import { Link } from "react-router-dom";
+import useLogin from "../hooks/useLogin";
 
 const handleLogin = async (values) => {
   console.log(values);
 };
 
 function Login() {
+  const { error, loading, loginUser } = useLogin();
+  const handleLogin = async (values) => {
+    await loginUser(values);
+  };
   return (
     <Card className="form-container">
       <Flex>
@@ -45,9 +50,9 @@ function Login() {
                 },
               ]}
             >
-              <Input size="large" placeholder="Enter you Password" />
+              <Input.Password size="large" placeholder="Enter you Password" />
             </Form.Item>
-            {/* {error && (
+            {error && (
               <Alert
                 description={error}
                 type="error"
@@ -55,16 +60,15 @@ function Login() {
                 closable
                 className="alert"
               />
-            )} */}
+            )}
             <Form-Item>
               <Button
-                // type={`${loading ? '' : 'primary'}`}
+                type={`${loading ? "" : "primary"}`}
                 htmlType="submit"
                 size="large"
                 className="btn"
               >
-                {/* {loading ? <Spin /> : "Create Account"} */}
-                "Sign In"
+                {loading ? <Spin /> : "Sign in"}
               </Button>
             </Form-Item>
             <Form-Item>
