@@ -15,7 +15,6 @@ function Login() {
   return (
     <Card className="form-container">
       <Flex>
-        {/* form */}
         <Flex vertical flex={1}>
           <Typography.Title level={3} strong className="title">
             Sign In
